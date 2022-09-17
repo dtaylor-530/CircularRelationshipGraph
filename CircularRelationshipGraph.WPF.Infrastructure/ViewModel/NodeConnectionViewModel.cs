@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -9,26 +8,6 @@ namespace CircularRelationshipGraph
         private static readonly Size EMPTY_SIZE = new Size();
 
         private static readonly Point EMPTY_POINT = new Point();
-
-        #region INotifyPropertyChanged Members
-
-        /// <summary>
-        /// Occurs when a property changes
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Raises a PropertyChanged event
-        /// </summary>
-        protected void OnPropertyChanged(string property)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-            }
-        }
-
-        #endregion INotifyPropertyChanged Members
 
         /// <summary>
         /// Field which backs the Size property
@@ -85,10 +64,5 @@ namespace CircularRelationshipGraph
                 OnPropertyChanged(SweepDirectionProperty);
             }
         }
-
-        /// <summary>
-        /// Invoked when the value of SweepDirection changes
-        /// </summary>
-        //partial void OnSweepDirectionChanged(SweepDirection value);
     }
 }
