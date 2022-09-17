@@ -1,0 +1,21 @@
+﻿using System;
+using System.Windows;
+using System.Windows.Data;
+
+namespace CircularRelationshipGraph
+{
+    public class DoubleToVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            double collapsedBound = double.Parse((string)parameter);
+            double doubleValue = (double)value;
+            return doubleValue > collapsedBound ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

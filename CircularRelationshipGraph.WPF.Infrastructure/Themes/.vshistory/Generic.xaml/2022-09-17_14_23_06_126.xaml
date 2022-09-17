@@ -1,0 +1,13 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CircularRelationshipGraph"
+    xmlns:prim="clr-namespace:CircularRelationshipGraph.Primitives"
+    xmlns:datavis="clr-namespace:System.Windows.Controls.DataVisualization"
+    xmlns:local1="clr-namespace:CircularRelationshipGraph;assembly=CircularRelationshipGraph.Infrastructure">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CircularRelationshipGraph.WPF.Infrastructure;component/Primitives/NodeSegment.xaml" />
+        <ResourceDictionary Source="CircularRelationshipGraph.WPF.Infrastructure;component/RelationshipGraph.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

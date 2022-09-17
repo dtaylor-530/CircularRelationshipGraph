@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CircularRelationshipGraph.Infrastructure\CircularRelationshipGraph.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Page Update="Shapes.xaml">
+			<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+		</Page>
+		<Page Update="Themes\Generic.xaml">
+			<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+		</Page>
+
+		<Compile Update="Primitives/NodeConnection.cs">
+			<DependentUpon>NodeConnection.xaml</DependentUpon>
+		</Compile>
+
+		<Compile Update="Primitives/NodeConnection_Generated.cs">
+			<DependentUpon>NodeConnection.xaml</DependentUpon>
+		</Compile>
+
+		<Compile Update="Primitives/NodeSegment.cs">
+			<DependentUpon>NodeSegment.xaml</DependentUpon>
+		</Compile>
+
+		<Compile Update="Primitives/NodeSegment_Generated.cs">
+			<DependentUpon>NodeSegment.xaml</DependentUpon>
+		</Compile>
+
+	</ItemGroup>
+
+</Project>
